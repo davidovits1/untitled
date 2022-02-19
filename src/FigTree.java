@@ -1,18 +1,36 @@
 public class FigTree extends Tree {
 
-
     FigTree(int height, Season season) {
         // TODO: Implement.
-        super(0,null,null);
+        super(height, season, null);
     }
 
     @Override
-    public String toString() {
-        // TODO: Implement.
-        return null;
-    }
-    @Override
     public void changeSeason() {
-        // TODO: Implement.
+        super.changeSeason();
+
+        switch (season) {
+            case WINTER -> {
+                height += 20;
+                leavesColor = null;
+            }
+
+            case SPRING -> {
+                height += 30;
+                leavesColor = Color.GREEN;
+            }
+
+            case SUMMER -> {
+                height += 30;
+                isFruit = IsFruit.ThereIsFruit;
+            }
+
+            case FALL -> {
+                height += 20;
+                leavesColor = Color.YELLOW;
+            }
+        }
+
+
     }
 }

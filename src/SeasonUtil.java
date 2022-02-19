@@ -3,12 +3,18 @@ import java.util.Arrays;
 
 public class SeasonUtil {
     public static final Season[] SEASONS = Season.values();
+
     public static void sortSeasonable(Comparable[] seasonables) {
-        // TODO: Implement.
+        Arrays.sort(seasonables);
     }
 
     static String reportAll(Seasonable[] seasonables) {
-        // TODO: Implement.
-        return null;
+        String seasonableStr = "";
+
+        for (var seasonable : seasonables) {
+            seasonableStr += seasonable + " ";
+        }
+
+        return seasonableStr;
     }
 }

@@ -1,18 +1,38 @@
 public class OliveTree extends Tree {
 
-
     OliveTree(int height, Season season) {
-        // TODO: Implement.
-        super(0,null,null);
+        super(height, season, null);
     }
 
     @Override
     public String toString() {
-        // TODO: Implement.
-        return null;
+        return "OliveTree: " + super.toString();
     }
+
     @Override
     public void changeSeason() {
-        // TODO: Implement.
+        super.changeSeason();
+
+        switch (season) {
+            case WINTER -> {
+                height += 5;
+            }
+
+            case SPRING -> {
+                height += 10;
+                leavesColor = Color.GREEN;
+            }
+
+            case SUMMER -> {
+                height += 10;
+
+            }
+
+            case FALL -> {
+                height += 5;
+                leavesColor = Color.YELLOW;
+            }
+        }
     }
+
 }
