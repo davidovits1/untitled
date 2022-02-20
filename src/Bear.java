@@ -6,15 +6,9 @@ public class Bear extends Animal {
         super(weight,season,Color.BROWN);
     }
 
-    public AlertnessState getAlertnessState() {
-        return alertnessState;
-    }
-
     @Override
     public String toString() {
-        return  "Bear{" + super.toString() +
-                "alertnessState=" + alertnessState +
-                '}';
+        return  "Bear. " + (alertnessState == AlertnessState.awake ? "" : "I am sleeping. ") +  super.toString();
     }
 
     @Override

@@ -22,10 +22,7 @@ public abstract class Animal implements Seasonable, Comparable {
 
     @Override
     public String toString() {
-        return
-                "weight=" + weight +
-                        ", season=" + season +
-                        ", color=" + color;
+        return " My weight is: " + weight + ", and my color is: " + color;
     }
 
     public void changeSeason() {

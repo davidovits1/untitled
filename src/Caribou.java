@@ -8,9 +8,9 @@ public class Caribou extends Animal {
 
     @Override
     public String toString() {
-        return "Caribou{" + super.toString() +
-                ", roaming=" + roaming +
-                '}';
+        return  "Caribou: " + (season == Season.WINTER ? "I am migrating south. " :
+                season == Season.SUMMER ? "I am migrating north. " : "")
+                + super.toString();
     }
 
     @Override
@@ -24,8 +24,6 @@ public class Caribou extends Animal {
             case SPRING -> color = Color.BROWN;
 
             case SUMMER -> roaming = Roaming.north;
-
-
         }
     }
 }

@@ -1,8 +1,12 @@
 public class FigTree extends Tree {
 
     FigTree(int height, Season season) {
-        // TODO: Implement.
         super(height, season, null);
+    }
+
+    @Override
+    public String toString() {
+        return "FigTree. " + (season == Season.SUMMER ? "I give fruit. " : "") + super.toString() + (leavesColor == null ? "and I have no leaves" : "");
     }
 
     @Override

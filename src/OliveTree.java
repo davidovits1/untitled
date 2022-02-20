@@ -6,7 +6,7 @@ public class OliveTree extends Tree {
 
     @Override
     public String toString() {
-        return "OliveTree: " + super.toString();
+        return "OliveTree. " + (season == Season.FALL ? "I give fruit. " : "") + super.toString();
     }
 
     @Override
@@ -14,23 +14,13 @@ public class OliveTree extends Tree {
         super.changeSeason();
 
         switch (season) {
-            case WINTER -> {
-                height += 5;
-            }
+            case WINTER -> height += 5;
 
-            case SPRING -> {
-                height += 10;
-                leavesColor = Color.GREEN;
-            }
-
-            case SUMMER -> {
-                height += 10;
-
-            }
+            case SPRING, SUMMER -> height += 10;
 
             case FALL -> {
                 height += 5;
-                leavesColor = Color.YELLOW;
+                isFruit = IsFruit.ThereIsFruit;
             }
         }
     }

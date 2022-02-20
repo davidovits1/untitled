@@ -12,7 +12,7 @@ public class SeasonUtil {
         String seasonableStr = "";
 
         for (var seasonable : seasonables) {
-            seasonableStr += seasonable + " ";
+            seasonableStr += seasonable + " " + System.lineSeparator();
         }
 
         return seasonableStr;
