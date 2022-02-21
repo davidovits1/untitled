@@ -1,7 +1,7 @@
 public class OliveTree extends Tree {
 
     OliveTree(int height, Season season) {
-        super(height, season, null);
+        super(height, season, Color.GREEN);
     }
 
     @Override

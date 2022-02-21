@@ -3,7 +3,7 @@ public class Caribou extends Animal {
     private Roaming roaming;
 
     Caribou(int weight, Season season) {
-        super(weight, season, Color.WHITE);
+        super(weight, season, Color.BROWN);
     }
 
     @Override

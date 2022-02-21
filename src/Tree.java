@@ -3,7 +3,7 @@ public abstract class Tree implements Comparable, Seasonable {
     protected Season season;
     protected Color leavesColor;
     protected IsFruit isFruit = IsFruit.ThereIsNoFruit;
-    // TODO: Add auxiliary fields and functions.
+    protected boolean thereIsLeaf = true;
 
     Tree(int height, Season season, Color leavesColor) {
         this.height = height;
@@ -14,7 +14,7 @@ public abstract class Tree implements Comparable, Seasonable {
 
     @Override
     public String toString() {
-        return " My height is: " + height + ", and my color is: " + leavesColor;
+        return "My height is: " + height + " and my color is: " + leavesColor;
     }
 
     @Override

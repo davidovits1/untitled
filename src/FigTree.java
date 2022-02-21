@@ -1,13 +1,18 @@
 public class FigTree extends Tree {
 
     FigTree(int height, Season season) {
-        super(height, season, null);
+        super(height, season, Color.YELLOW);
     }
 
     @Override
     public String toString() {
-        return "FigTree. " + (season == Season.SUMMER ? "I give fruit. " : "") + super.toString() + (leavesColor == null ? "and I have no leaves" : "");
+        String str = "FigTree. " + (season == Season.SUMMER ? "I give fruit. " : "") + super.toString();
+        if(!thereIsLeaf){
+            str += " and I have no leaves";
+        }
+        return  str;
     }
+
 
     @Override
     public void changeSeason() {
@@ -16,7 +21,7 @@ public class FigTree extends Tree {
         switch (season) {
             case WINTER -> {
                 height += 20;
-                leavesColor = null;
+                thereIsLeaf = false;
             }
 
             case SPRING -> {
