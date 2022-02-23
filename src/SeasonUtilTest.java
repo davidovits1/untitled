@@ -50,7 +50,9 @@ public class SeasonUtilTest {
         SeasonUtil.sortSeasonable(trees);
         System.out.println(SeasonUtil.reportAll(trees));
 
+
     }
+
     public static int rand(int min, int max)
     {
         if (min > max) {

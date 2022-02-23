@@ -15,15 +15,24 @@ public class Caribou extends Animal {
 
     @Override
     public void changeSeason() {
+
         super.changeSeason();
+
         switch (season) {
-            case WINTER -> {
+
+            case WINTER:
                 color = Color.WHITE;
                 roaming = Roaming.south;
-            }
-            case SPRING -> color = Color.BROWN;
+                break;
 
-            case SUMMER -> roaming = Roaming.north;
+            case SPRING:
+                color = Color.BROWN;
+                roaming = null;
+                break;
+
+            case SUMMER:
+                roaming = Roaming.north;
+                break;
         }
     }
 }

@@ -1,4 +1,5 @@
 public abstract class Tree implements Comparable, Seasonable {
+
     protected int height;
     protected Season season;
     protected Color leavesColor;
@@ -14,7 +15,13 @@ public abstract class Tree implements Comparable, Seasonable {
 
     @Override
     public String toString() {
-        return "My height is: " + height + " and my color is: " + leavesColor;
+
+        String str = "My height is: " + height;
+
+        if(leavesColor != null)
+            str += " and my color is: " + leavesColor;
+
+        return str;
     }
 
     @Override
@@ -25,6 +32,8 @@ public abstract class Tree implements Comparable, Seasonable {
     public void changeSeason() {
         int currentSeason = season.ordinal() + 1;
         season = currentSeason == 4 ? Season.WINTER : Season.values()[currentSeason];
+
+
     }
 
     @Override

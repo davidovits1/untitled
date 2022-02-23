@@ -13,18 +13,28 @@ public class Bear extends Animal {
 
     @Override
     public void changeSeason() {
+
         super.changeSeason();
+
         switch (season) {
-            case WINTER -> {
-                weight -= weight / 5;
+
+            case WINTER:
+                weight -= weight / 5.0;
                 alertnessState = AlertnessState.sleep;
-            }
-            case SPRING -> weight -= weight / 4;
+                return;
 
-            case SUMMER -> weight += weight / 3;
+            case SPRING:
+                weight -= weight / 4.0;
+                break;
 
-            case FALL -> weight += weight / 4;
+            case SUMMER:
+                weight += weight / 3.0;
+                break;
 
+            case FALL:
+                weight += weight / 4.0;
+                break;
         }
+        alertnessState = AlertnessState.awake;
     }
 }

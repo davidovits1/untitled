@@ -6,23 +6,30 @@ public class OliveTree extends Tree {
 
     @Override
     public String toString() {
-        return "OliveTree. " + (season == Season.FALL ? "I give fruit. " : "") + super.toString();
+        return "Olive tree. " + (season == Season.FALL ? "I give fruit. " : "") + super.toString();
     }
 
     @Override
     public void changeSeason() {
+
         super.changeSeason();
 
         switch (season) {
-            case WINTER -> height += 5;
 
-            case SPRING, SUMMER -> height += 10;
+            case WINTER :
+                height += 5;
+                break;
 
-            case FALL -> {
+            case SUMMER: height += 10; break;
+
+            case SPRING: height += 10; break;
+
+            case FALL:
                 height += 5;
                 isFruit = IsFruit.ThereIsFruit;
-            }
+                return;
         }
+        isFruit = IsFruit.ThereIsNoFruit;
     }
 
 }

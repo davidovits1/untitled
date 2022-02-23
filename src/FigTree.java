@@ -6,7 +6,9 @@ public class FigTree extends Tree {
 
     @Override
     public String toString() {
-        String str = "FigTree. " + (season == Season.SUMMER ? "I give fruit. " : "") + super.toString();
+
+        String str = "Fig tree. " + (season == Season.SUMMER ? "I give fruit. " : "") + super.toString();
+
         if(!thereIsLeaf){
             str += " and I have no leaves";
         }
@@ -19,27 +21,29 @@ public class FigTree extends Tree {
         super.changeSeason();
 
         switch (season) {
-            case WINTER -> {
+
+            case WINTER:
                 height += 20;
                 thereIsLeaf = false;
-            }
+                leavesColor = null;
+                return;
 
-            case SPRING -> {
+            case SPRING:
                 height += 30;
                 leavesColor = Color.GREEN;
-            }
+                break;
 
-            case SUMMER -> {
+            case SUMMER:
                 height += 30;
                 isFruit = IsFruit.ThereIsFruit;
-            }
+                break;
 
-            case FALL -> {
+            case FALL:
                 height += 20;
                 leavesColor = Color.YELLOW;
-            }
+                break;
         }
-
+        thereIsLeaf = true;
 
     }
 }
