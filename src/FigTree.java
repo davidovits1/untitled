@@ -6,7 +6,7 @@ public class FigTree extends Tree {
 
     @Override
     public String toString() {
-        String str = "FigTree. " + (season == Season.SUMMER ? "I give fruit. " : "") + super.toString();
+        String str = "Fig tree. " + (season == Season.SUMMER ? "I give fruit. " : "") + super.toString();
         if(!thereIsLeaf){
             str += " and I have no leaves";
         }

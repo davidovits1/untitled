@@ -6,7 +6,7 @@ public class OliveTree extends Tree {
 
     @Override
     public String toString() {
-        return "OliveTree. " + (season == Season.FALL ? "I give fruit. " : "") + super.toString();
+        return "Olive tree. " + (season == Season.FALL ? "I give fruit. " : "") + super.toString();
     }
 
     @Override
