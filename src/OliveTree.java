@@ -1,3 +1,4 @@
+//class olive tree in the four seasons
 public class OliveTree extends Tree {
 
     OliveTree(int height, Season season) {

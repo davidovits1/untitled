@@ -1,3 +1,4 @@
+//class caribou in the four seasons
 public class Caribou extends Animal {
 
     private Roaming roaming;

@@ -1,3 +1,4 @@
+//class fig tree in the four seasons
 public class FigTree extends Tree {
 
     FigTree(int height, Season season) {

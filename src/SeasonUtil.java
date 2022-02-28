@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
+//class util of season
 public class SeasonUtil {
     public static final Season[] SEASONS = Season.values();
 

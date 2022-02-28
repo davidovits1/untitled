@@ -1,3 +1,4 @@
+//class bear in the four seasons
 public class Bear extends Animal {
 
     private AlertnessState alertnessState = AlertnessState.awake;

@@ -1,8 +1,10 @@
+//class animal with weight animal, current season and color of animal
 public abstract class Animal implements Seasonable, Comparable {
     protected int weight;
     protected Season season;
     protected Color color;
 
+    //cTor of animal
     Animal(int weight, Season season, Color color) {
         this.weight = weight;
         this.season = season;
@@ -25,6 +27,7 @@ public abstract class Animal implements Seasonable, Comparable {
         return "My weight is: " + weight + " and my color is: " + color;
     }
 
+    //change to next season
     public void changeSeason() {
         int currentSeason = season.ordinal() + 1;
         season = currentSeason == 4 ? Season.WINTER : Season.values()[currentSeason];

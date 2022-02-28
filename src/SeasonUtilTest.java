@@ -1,6 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
 
+//David Ovits 311179378
+//Yehuda Shor 207615055
 public class SeasonUtilTest {
     static final int TOTAL = 8;
     static final int ANIMAL_MIN_INITIAL_WEIGHT = 200;
@@ -50,9 +52,7 @@ public class SeasonUtilTest {
         SeasonUtil.sortSeasonable(trees);
         System.out.println(SeasonUtil.reportAll(trees));
 
-
     }
-
     public static int rand(int min, int max)
     {
         if (min > max) {

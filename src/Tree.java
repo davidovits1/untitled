@@ -1,3 +1,4 @@
+//class tree with height tree, current season, color of leaves (If they exist) and state of fruit
 public abstract class Tree implements Comparable, Seasonable {
 
     protected int height;
@@ -29,6 +30,7 @@ public abstract class Tree implements Comparable, Seasonable {
         return season;
     }
 
+    ////change to next season
     public void changeSeason() {
         int currentSeason = season.ordinal() + 1;
         season = currentSeason == 4 ? Season.WINTER : Season.values()[currentSeason];
